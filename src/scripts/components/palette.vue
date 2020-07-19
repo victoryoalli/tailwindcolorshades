@@ -33,6 +33,7 @@ export default {
 
       tintsPerVersion: {
         1: {
+          50: 0.95,
           100: 0.9,
           200: 0.75,
           300: 0.6,
@@ -236,8 +237,8 @@ export default {
 
 <template>
   <div class="palette">
-    <span class="close float-right m-4 cursor-pointer" @click="remove()">
-      <i class="far fa-trash-alt text-white"></i>
+    <span class="float-right m-4 cursor-pointer close" @click="remove()">
+      <i class="text-white far fa-trash-alt"></i>
     </span>
     <ul>
       <li
@@ -274,7 +275,7 @@ export default {
         :key="$index"
       >
         <span>{{ color.label | unquoted }}</span>
-        <span class="color-code float-right">{{ color.background.toUpperCase() }}</span>
+        <span class="float-right color-code">{{ color.background.toUpperCase() }}</span>
       </li>
     </ul>
   </div>
